@@ -1,0 +1,14 @@
+// same approach as of finding the middle only keeps the track of the previous of the slow
+// prev = null intially
+ListNode prev = null;
+ListNode slow = head;
+ListNode fast = head;
+while(Fast != null && fast.next != null){
+prev = slow;
+slow = slow.next;
+fast = fast.next.next;
+}
+prev.next = slow.next;
+return head;
+}
+}
