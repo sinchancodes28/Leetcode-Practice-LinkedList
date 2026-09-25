@@ -1,0 +1,14 @@
+// Take two pointer slow and fast
+// slow = slow.next 
+// fast = fast.next.next
+//&& beacause if any one condition fails then loops stops 
+// while( fast != null && fast.next != null)
+//code
+ListNode = slow;
+ListNode = fast;
+while( fast != null && fast.next != null){
+slow = slow.next;
+fast = fast.next.next;
+}
+return slow;
+}
